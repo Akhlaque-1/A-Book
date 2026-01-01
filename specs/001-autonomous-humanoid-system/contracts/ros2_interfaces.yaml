@@ -1,0 +1,92 @@
+# ROS 2 Interface Definitions for Autonomous Humanoid Robot System
+
+# Service Definition: Voice Command Processing
+service: ProcessVoiceCommand
+request:
+  - command_text: string
+  - confidence_threshold: float
+response:
+  - success: bool
+  - action_plan_id: string
+  - error_message: string
+
+# Service Definition: Navigation Planning
+service: PlanNavigation
+request:
+  - start_pose: geometry_msgs/Pose
+  - goal_pose: geometry_msgs/Pose
+  - map_name: string
+response:
+  - success: bool
+  - path: nav_msgs/Path
+  - estimated_time: float
+  - error_message: string
+
+# Service Definition: Object Detection
+service: DetectObjects
+request:
+  - sensor_data: sensor_msgs/Image
+  - detection_threshold: float
+response:
+  - success: bool
+  - objects: array
+    items:
+      type: object
+      properties:
+        class_name: string
+        confidence: float
+        bounding_box:
+          type: object
+          properties:
+            x: float
+            y: float
+            width: float
+            height: float
+  - error_message: string
+
+# Action Definition: Move Humanoid
+action: MoveHumanoid
+goal:
+  - target_pose: geometry_msgs/Pose
+  - movement_type: string  # "walk", "step", "crawl"
+feedback:
+  - current_pose: geometry_msgs/Pose
+  - progress: float  # 0.0 to 1.0
+  - status: string
+result:
+  - success: bool
+  - final_pose: geometry_msgs/Pose
+  - error_message: string
+
+# Topic Definition: Robot State
+topic: /robot_state
+type: humanoid_robot_msgs/HumanoidState
+message:
+  - header: std_msgs/Header
+  - joint_states: sensor_msgs/JointState
+  - base_pose: geometry_msgs/Pose
+  - center_of_mass: geometry_msgs/Point
+  - stability_index: float
+
+# Topic Definition: Sensor Data Stream
+topic: /sensor_data_stream
+type: humanoid_robot_msgs/SensorDataStream
+message:
+  - header: std_msgs/Header
+  - sensor_type: string
+  - sensor_id: string
+  - data: string  # Base64 encoded sensor data
+  - frame_id: string
+  - quality: float
+
+# Topic Definition: Action Command
+topic: /action_command
+type: humanoid_robot_msgs/ActionCommand
+message:
+  - header: std_msgs/Header
+  - command_type: string
+  - parameters: array
+    items:
+      type: float
+  - target_pose: geometry_msgs/Pose
+  - execution_priority: int32

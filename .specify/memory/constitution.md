@@ -1,55 +1,65 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: N/A → 1.0.0 (initial constitution)
+- List of modified principles:
+  - Principle 1: Accuracy and correctness of all technical content
+  - Principle 2: Clear, structured writing for beginner–to–intermediate developers
+  - Principle 3: Strict spec-driven workflow using Spec-Kit Plus
+  - Principle 4: Practical, real-world examples
+  - Principle 5: Responsible and effective use of AI tools
+- Added sections: Core Principles, Standards, Constraints, Success Criteria
+- Removed sections: None
+- Templates requiring updates:
+  - .specify/templates/plan-template.md ✅ updated
+  - .specify/templates/spec-template.md ✅ updated
+  - .specify/templates/tasks-template.md ✅ updated
+  - .specify/templates/commands/*.md ✅ updated
+- Follow-up TODOs: None
+-->
+
+# AI / Spec-Driven Book Creation Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Accuracy and correctness of all technical content
+All technical information, code examples, and explanations must be factually accurate and technically correct. No hallucinated tools, features, or capabilities should be presented as real.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Clear, structured writing for beginner–to–intermediate developers
+Content must be written with a simple, professional instructional tone that is accessible to developers with varying levels of experience. Structure should be logical and consistent throughout the book.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Strict spec-driven workflow using Spec-Kit Plus
+All development must follow the spec-driven process using Spec-Kit Plus conventions (/sp.plan, /sp.write, etc.). Every feature and chapter must be planned before implementation.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Practical, real-world examples
+All concepts must be demonstrated with practical, real-world examples that readers can apply in their own work. Examples must be correct and reproducible.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Responsible and effective use of AI tools
+AI tools should be leveraged effectively to enhance productivity and quality while maintaining human oversight and responsibility for the final output.
 
-### [PRINCIPLE_6_NAME]
+## Standards
 
+- No hallucinated tools or features
+- Original, plagiarism-free content
+- Consistent terminology and structure
+- Code examples must be correct and reproducible
+- Prefer official documentation where references are needed
 
-[PRINCIPLE__DESCRIPTION]
+## Constraints
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+- Written in Markdown / MDX for Docusaurus
+- Uses Spec-Kit Plus conventions (/sp.plan, /sp.write, etc.)
+- Deployed to GitHub Pages
+- Simple, professional instructional tone
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Success Criteria
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- Complete book follows spec-driven process
+- Content builds and renders correctly in Docusaurus
+- Successfully deployed on GitHub Pages
+- Clear learning value in every chapter
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution governs all aspects of the AI / Spec-Driven Book Creation project. All development practices, code reviews, and project decisions must align with these principles. Amendments to this constitution require documentation of the changes, approval from project maintainers, and a migration plan for existing content.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-01-01 | **Last Amended**: 2025-01-01

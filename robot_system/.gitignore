@@ -1,0 +1,120 @@
+# ROS 2 specific
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.Python
+build/
+install/
+log/
+*.log
+*.yaml
+*.xml
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# C++/C build files
+*.o
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+build/
+bin/
+obj/
+*.i
+*.ii
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment
+venv/
+env/
+ENV/
+.venv/
+.env
+
+# Data files
+*.csv
+*.json
+*.db
+*.sqlite
+
+# Simulation specific
+.gazebo/
+.unity/
+*.gazebo
+*.unitypackage
+
+# Documentation
+docs/_build/
+
+# Logs
+*.log
+*.out
+*.err
+
+# Configuration (except important ones)
+config/local_*
+config/dev_*
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.dylib
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.cov/
